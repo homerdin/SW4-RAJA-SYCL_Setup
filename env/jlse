@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export MODULEPATH=$MODULEPATH:/soft/modulefiles
+export MODULEPATH=$MODULEPATH:/soft/restricted/CNDA/modulefiles/
+
+module load cmake
+module load oneapi
+
+
