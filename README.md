@@ -2,9 +2,11 @@
 
 Setup for the SW4 RAJA-SYCL port
 
-On JLSE:
-`source ./env/sw4`
-`make`
+### On JLSE:
+```
+source ./env/sw4
+make
+```
 
 1. Setup Environment
   - Needs
