@@ -17,6 +17,7 @@ umpire: spack
 
 spack:
 	git clone -c feature.manyFiles=true https://github.com/spack/spack.git
+	. ./spack/share/spack/setup-env.sh
 
 clean:
 	rm -rf RAJA
