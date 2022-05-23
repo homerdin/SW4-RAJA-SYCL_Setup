@@ -6,4 +6,7 @@ DATE=$(printf '%(%Y-%m-%d)T\n' -1)
 
 cd sw4
 
-make -f Makefile.sycl RAJA_HOME=${1}/install/raja.${DATE} 
+UMPIRE_HM=$(spack find -p umpire | grep umpire | awk -F ' ' '{print $2}')
+PROJ_HM=$(spack find -p umpire | grep proj | awk -F ' ' '{print $2}')
+
+make -f Makefile.sycl RAJA_HOME=${1}/install/raja.${DATE} UMPIRE_HOME=${UMPIRE_HM} PROJ_HOME=${PROJ_HM}
