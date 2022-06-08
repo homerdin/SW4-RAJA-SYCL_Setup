@@ -17,7 +17,28 @@ umpire: spack
 
 spack:
 	git clone -c feature.manyFiles=true https://github.com/spack/spack.git
-	. ./spack/share/spack/setup-env.sh
+	#. ./spack/share/spack/setup-env.sh
+	
+
+# Reproducers
+fom:
+	mkdir fom
+
+reduction:
+	mkdir reduction
+
+small_register:
+	mkdir small_register
+
+non_serialize:
+	mkdir non_serialize
+
+#function pointer
 
 clean:
 	rm -rf RAJA
+	rm -rf spack
+	rm -rf sw4
+	rm -rf install
+	rm sw4_build_job.out
+	rm sw4_build_job.err
