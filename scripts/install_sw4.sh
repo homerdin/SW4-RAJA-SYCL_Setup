@@ -12,7 +12,7 @@ PROJ_HM=$(${1}/spack/bin/spack find -p proj | grep proj | awk -F ' ' '{print $2}
 echo $UMPIRE_HM
 echo $PROJ_HM
 
-source ./env/sw4
+#source ./env/sw4
 
 # On JLSE gets built with gcc (asan), but not available when using dpcpp.
 # Configuration of Spack to use icx is not automatic
