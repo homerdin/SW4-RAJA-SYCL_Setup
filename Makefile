@@ -23,6 +23,8 @@ spack:
 # Reproducers
 fom:
 	mkdir fom
+	cd ./sw4/examples/rfile
+	../../optimize_sycl/sw4 ./berkeley-r.in > ../../../fom/berkeley.out
 
 reduction:
 	mkdir reduction

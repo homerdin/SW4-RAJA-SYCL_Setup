@@ -3,7 +3,4 @@
 source ./env/jlse
 
 export SYCL_PROGRAM_COMPILE_OPTIONS="-ze-opt-large-register-file"
-
-export SYCL_DEVICE_FILTER=level_zero
 export ZE_SERIALIZE=2
-export LD_LIBRARY_PATH=/home/bhomerding/install/proj-5.2.0/lib:$LD_LIBRARY_PATH
