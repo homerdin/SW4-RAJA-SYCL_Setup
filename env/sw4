@@ -1,6 +1,27 @@
 #!/bin/bash
 
-source ./env/jlse
+#source ./env/jlse
 
-export SYCL_PROGRAM_COMPILE_OPTIONS="-ze-opt-large-register-file"
+#old
+#export SYCL_PROGRAM_COMPILE_OPTIONS="-ze-opt-large-register-file"
 export ZE_SERIALIZE=2
+
+# new
+export SYCL_CACHE_TRACE=1
+export SYCL_CACHE_PERSISTENT=1
+
+export IGC_ForceOCLSIMDWidth=16
+#export FI_CXI_CQ_FILL_PERCENT=20,
+export FI_CXI_DEFAULT_CQ_SIZE=131072
+
+#export IGC_ShaderDumpEnable=1
+#export IGC_DumpToCustomDir=`pwd`/IGC/
+# vvvv this break the multi node vvvv
+#export MPIR_CVAR_ENABLE_GPU=0
+#
+export SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
+
+export ZE_ENABLE_PCI_ID_DEVICE_ORDER=1
+#export ZE_AFFINITY_MASK=0.0,0.1,1.0,1.1,2.0,2.1,3.0,3.1,4.0,4.1,5.0,5.1
+#export SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMAND_LIST=1
+export SYCL_PROGRAM_COMPILE_OPTIONS="-ze-opt-large-register-file"
