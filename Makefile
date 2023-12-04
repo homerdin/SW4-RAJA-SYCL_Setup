@@ -16,7 +16,7 @@ umpire: spack
 	./scripts/install_umpire.sh
 
 spack:
-	git clone -c feature.manyFiles=true https://github.com/spack/spack.git
+	git clone -c feature.manyFiles=true --depth 1 --branch releases/latest https://github.com/spack/spack.git
 	#. ./spack/share/spack/setup-env.sh
 	
 
